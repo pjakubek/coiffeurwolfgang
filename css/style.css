@@ -1,6 +1,6 @@
 
 .navigation, .cover-content{
-  font-family: 'Norican', cursive;
+  font-family: 'Norica', cursive;
 }
 
 .cover-content{
@@ -13,7 +13,7 @@
   background:url("salon.jpg");
   height: auto;
   position: relative;
-  top: -55px;
+  top: -125px;
   width: 100%;
   background-size:cover;
   background-attachment: fixed;
@@ -57,6 +57,10 @@ li {
   margin: 0;
 }
 
+.content{
+  display: block;
+}
+
 .hours{
     margin:0;
 }
@@ -71,9 +75,4 @@ li {
 a{
   color:black;
   text-decoration: none;
-}
-a:hover {
-    background-color: #fec87c;
-    border-radius: 5px;
-    padding: 5px;
 }
