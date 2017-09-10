@@ -1,7 +1,7 @@
 Website Coiffeur Wolfgang
 ----
 
-####Todo
+#### Todo
 
 - [ ] Home
 - [ ] About
@@ -12,7 +12,7 @@ Website Coiffeur Wolfgang
 - [ ] Deutsch/Englisch
 - [ ] Stylesheet ersetzen/ergänzen
 
-####Aufteilung
+#### Aufteilung
 
 | Marc | Peter|
 |--------|--------|
