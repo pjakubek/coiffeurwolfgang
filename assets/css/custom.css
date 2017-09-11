@@ -1,0 +1,38 @@
+/* Cover
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.cover{
+  background-image: url("../salon.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 8rem 0 7rem;
+}
+
+/* Categories
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* Bigger than 550 */
+@media (min-width: 550px) {
+  .cover {
+    padding: 12rem 0 11rem;
+  }
+}
+
+/* Bigger than 750 */
+@media (min-width: 750px) {
+  .cover {
+    padding: 14rem 0 15rem;
+  }
+}
+
+/* Bigger than 1000 */
+@media (min-width: 1000px) {
+  .cover {
+    padding: 40rem 0 19rem;
+
+  }
+  .logo h1{
+    font-size: 11rem;
+    font-weight: 300;
+  }
+}
