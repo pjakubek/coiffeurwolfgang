@@ -371,8 +371,24 @@ form {
   float: right; }
 .u-pull-left {
   float: left; }
+.navbar {
+  position: fixed;
+  top: 0;
+  background-color: #673342;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
 
-
+.footer {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #673342;
+  text-align: center;
+}
 /* Misc
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 hr {
