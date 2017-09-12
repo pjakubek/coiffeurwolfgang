@@ -53,15 +53,15 @@
     <h2>Wünsche, Anregungen oder Beschwerden?</h2>
     Im untenstehenden Formular können Sie uns etwas mitteilen!
 
-    <form>
+    <form method="POST" action="../assets/php/formsender.php">
       <div class="row">
         <div class="six columns">
           <label for="exampleEmailInput">Ihre E-Mail-Adresse</label>
-          <input class="u-full-width" type="email" placeholder="test@mailbox.com" id="exampleEmailInput">
+          <input class="u-full-width" name="email_address" type="email" placeholder="test@mailbox.com" id="exampleEmailInput">
         </div>
         <div class="six columns">
           <label for="exampleRecipientInput">Betreff (bitte ausw&auml;hlen!)</label>
-          <select class="u-full-width" id="exampleRecipientInput">
+          <select class="u-full-width" name="subject" id="exampleRecipientInput">
             <option value="Option 1">Wunsch/Verbesserungsvorschlag</option>
             <option value="Option 2">Lob</option>
             <option value="Option 3">Beschwerde</option>
@@ -69,12 +69,12 @@
         </div>
       </div>
       <label for="exampleMessage">Nachricht</label>
-      <textarea class="u-full-width" placeholder="Liebes Salon Coiffeur Wolfgang-Team..." id="exampleMessage"></textarea>
+      <textarea class="u-full-width" name="message" placeholder="Liebes Salon Coiffeur Wolfgang-Team..." id="exampleMessage"></textarea>
       <label class="example-send-yourself-copy">
-        <input type="checkbox">
+        <input type="checkbox" name="copy">
         <span class="label-body">Kopie an mich senden</span>
       </label>
-      <input class="button-primary" type="submit" value="Absenden">
+      <input class="button-primary" name="submit" type="submit" value="Absenden">
     </form>
 
 </div>
