@@ -5,12 +5,19 @@ Website Coiffeur Wolfgang
 
 - [ ] Home
 - [ ] About
-- [ ] Preise
-- [ ] Impressum
-- [ ] Kontakt (Formular, Google Maps)
+- [x] Preise
+- [x] Impressum
+- [x] Kontakt (Formular, Google Maps)
 - [ ] Terminverwaltung
 - [ ] Deutsch/Englisch
 - [ ] Stylesheet ersetzen/ergänzen
+- [ ] Navbar/Footer ändern (Footer ganz unten? Kontakt/Impressum nicht sichtbar)
+- [ ] Email senden Kontaktformular
+- [ ] Bewerbungsformular (Dateien hochladen)
+- [ ] Home Seite Farbe navbar (eigene Navbar fuer Index)
+- [x] Oeffnungszeiten Tabelle schaut seltsam aus (Petrus fast-fix)
+- [ ] Verlinkungen!
+
 
 #### Aufteilung
 
@@ -20,3 +27,4 @@ Website Coiffeur Wolfgang
 |Stylesheet| Kontakt|
 |Preise|Deutsch/Englisch|
 |Terminverwaltung|Terminverwaltung|
+
