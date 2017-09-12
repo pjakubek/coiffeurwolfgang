@@ -371,10 +371,23 @@ form {
   float: right; }
 .u-pull-left {
   float: left; }
+
+.navbar-home {
+  position: fixed;
+  top: 0;
+  background-color: "white";
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding-top: 15px;
+  box-sizing: border-box;
+  z-index: 1;
+  align= left;
+}
 .navbar {
   position: fixed;
   top: 0;
-  background-color: #FFB942;
+  background-color: rgba(255,185,66,0.8);
   width: 100%;
   max-width: 100%;
   margin: 0 auto;
@@ -385,10 +398,10 @@ form {
 }
 
 .footer {
-  position: relative;
+  position: absolute;
   width: 100%;
   margin: 0 auto;
-  background-color: #FFB942;
+  background-color: rgba(255,185,66,0.8);
   text-align: center;
 }
 /* Misc
@@ -397,7 +410,8 @@ hr {
   margin-top: 3rem;
   margin-bottom: 3.5rem;
   border-width: 0;
-  border-top: 1px solid #E1E1E1; }
+  border-top: 1px solid #0000;
+ }
 
 
 /* Clearing

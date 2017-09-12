@@ -6,9 +6,9 @@ if(empty($_POST['email_address']) ||
 {
     $errors .= "\n Error: all fields are required";
 }
-$name = $_POST['name'];
-$email_address = $_POST['email'];
+$email_address = $_POST['email_address'];
 $message = $_POST['message'];
+$subject = $_POST['subject'];
 if (!preg_match(
 "/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/i",
 $email_address))
@@ -27,7 +27,7 @@ $headers = "From: $myemail\n";
 $headers .= "Reply-To: $email_address";
 mail($to,$email_subject,$email_body,$headers);
 //redirect to the 'thank you' page
-header('Location: contact-form-thank-you.html');
+header('Location: ../../de/contact.html');
 print('alles gut');
 }
 ?>
