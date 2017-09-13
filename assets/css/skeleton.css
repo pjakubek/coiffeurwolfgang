@@ -119,8 +119,10 @@
 html is set to 62.5% so that all the REM measurements throughout Skeleton
 are based on 10px sizing. So basically 1.5rem = 15px :) */
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+height: 100%; }
 body {
+  height: 100%;
   font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.6;
   font-weight: 400;
@@ -372,6 +374,15 @@ form {
 .u-pull-left {
   float: left; }
 
+.wrap{
+  min-height: 100%;
+}
+.main {
+  overflow: auto;
+  padding-bottom: 20px;
+  /* must be same height as the footer */
+}
+
 .navbar-home {
   position: fixed;
   top: 0;
@@ -398,9 +409,12 @@ form {
 }
 
 .footer {
-  position: absolute;
+  position: relative;
   width: 100%;
-  margin: 0 auto;
+  margin-top: -20px;
+  /* negative value of footer height */
+  height: 20px;
+  clear: both;
   background-color: rgba(255,185,66,0.8);
   text-align: center;
 }

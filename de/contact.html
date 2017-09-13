@@ -26,90 +26,93 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 <body>
+  <div class="wrap">
+    <div class="main">
 
-<!-- BEGIN NAVBAR -->
-<div class="row">
-&nbsp;
-    <div class="navbar" align="center">
-      <div class="three columns">
-        <h3><a href="index.html">Home</a></h3>
-      </div>
-      <div class="three columns">
-        <h3><a href="about.html">&Uuml;ber uns</a></h3>
-      </div>
-      <div class="three columns">
-        <h3><a href="prices.html">Preise</a></h3>
-      </div>
-      <div class="three columns">
-        <h3><a href="carreer.html">Karriere</a></h3>
-      </div>
-    </div>
-<hr>
-</div>
-<!-- END NAVBAR -->
-
-<div class="row">
-  <div class="container">
-    <h2>Wünsche, Anregungen oder Beschwerden?</h2>
-    Im untenstehenden Formular können Sie uns etwas mitteilen!
-
-    <form method="POST" action="../assets/php/formsender.php">
+      <!-- BEGIN NAVBAR -->
       <div class="row">
-        <div class="six columns">
-          <label for="exampleEmailInput">Ihre E-Mail-Adresse</label>
-          <input class="u-full-width" name="email_address" type="email" placeholder="test@mailbox.com" id="exampleEmailInput">
+        &nbsp;
+        <div class="navbar" align="center">
+          <div class="three columns">
+            <h3><a href="index.html">Home</a></h3>
+          </div>
+          <div class="three columns">
+            <h3><a href="about.html">&Uuml;ber uns</a></h3>
+          </div>
+          <div class="three columns">
+            <h3><a href="prices.html">Preise</a></h3>
+          </div>
+          <div class="three columns">
+            <h3><a href="carreer.html">Karriere</a></h3>
+          </div>
         </div>
-        <div class="six columns">
-          <label for="exampleRecipientInput">Betreff (bitte ausw&auml;hlen!)</label>
-          <select class="u-full-width" name="subject" id="exampleRecipientInput">
-            <option value="Option 1">Wunsch/Verbesserungsvorschlag</option>
-            <option value="Option 2">Lob</option>
-            <option value="Option 3">Beschwerde</option>
-          </select>
+        <hr>
+      </div>
+      <!-- END NAVBAR -->
+
+      <div class="row">
+        <div class="container">
+          <h2>Wünsche, Anregungen oder Beschwerden?</h2>
+          Im untenstehenden Formular können Sie uns etwas mitteilen!
+
+          <form method="POST" action="../assets/php/formsender.php">
+            <div class="row">
+              <div class="six columns">
+                <label for="exampleEmailInput">Ihre E-Mail-Adresse</label>
+                <input class="u-full-width" name="email_address" type="email" placeholder="test@mailbox.com" id="exampleEmailInput">
+              </div>
+              <div class="six columns">
+                <label for="exampleRecipientInput">Betreff (bitte ausw&auml;hlen!)</label>
+                <select class="u-full-width" name="subject" id="exampleRecipientInput">
+                  <option value="Option 1">Wunsch/Verbesserungsvorschlag</option>
+                  <option value="Option 2">Lob</option>
+                  <option value="Option 3">Beschwerde</option>
+                </select>
+              </div>
+            </div>
+            <label for="exampleMessage">Nachricht</label>
+            <textarea class="u-full-width" name="message" placeholder="Liebes Salon Coiffeur Wolfgang-Team..." id="exampleMessage"></textarea>
+            <label class="example-send-yourself-copy">
+              <input type="checkbox" name="copy">
+              <span class="label-body">Kopie an mich senden</span>
+            </label>
+            <input class="button-primary" name="submit" type="submit" value="Absenden">
+          </form>
+
         </div>
       </div>
-      <label for="exampleMessage">Nachricht</label>
-      <textarea class="u-full-width" name="message" placeholder="Liebes Salon Coiffeur Wolfgang-Team..." id="exampleMessage"></textarea>
-      <label class="example-send-yourself-copy">
-        <input type="checkbox" name="copy">
-        <span class="label-body">Kopie an mich senden</span>
-      </label>
-      <input class="button-primary" name="submit" type="submit" value="Absenden">
-    </form>
-
-</div>
-</div>
-&nbsp;
-<div class="row">
-    <div class="container">
-      <h2> Termin gefällig? </h2>
-  </div>
-</div>
-&nbsp;
-
-
-<div class="row">
-  <div class="footer">
-    <div class="container">
-      <div class="one-third column">
- <a href="contact.html">Kontakt</a>
-</div>
-  <div class="one-third column">
-  Copyright © Salon Coiffeur Wolfgang 2017
+      &nbsp;
+      <div class="row">
+        <div class="container">
+          <h2> Termin gefällig? </h2>
+        </div>
+      </div>
+      &nbsp;
     </div>
-    <div class="one-third column">
-  <a href="imprint.html">Impressum</a>
-</div>
-</div>
+  </div>
 
-</div>
-</div>
+  <div class="row">
+    <div class="footer">
+      <div class="container">
+        <div class="one-third column">
+          <a href="contact.html">Kontakt</a>
+        </div>
+        <div class="one-third column">
+          Copyright © Salon Coiffeur Wolfgang 2017
+        </div>
+        <div class="one-third column">
+          <a href="imprint.html">Impressum</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </div>
 
 
 
 
 <!-- End Document
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
 </html>
