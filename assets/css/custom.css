@@ -28,9 +28,10 @@
 
 /* Bigger than 1000 */
 @media (min-width: 1000px) {
-  .cover {
-    padding: 40rem 0 19rem;
-
+  .logo{
+    position: relative;
+    max-width: 40%;
+    max-height: 40%;
   }
   .logo h1{
     font-size: 11rem;
