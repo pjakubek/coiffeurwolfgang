@@ -382,6 +382,8 @@ form {
   padding-bottom: 20px;
   /* must be same height as the footer */
 }
+  margin-top: 20px;
+}
 
 .navbar-home {
   position: fixed;
@@ -389,7 +391,7 @@ form {
   background-color: "white";
   width: 100%;
   max-width: 100%;
-  margin: 0 auto;
+  margin-bottom:20px;
   padding-top: 15px;
   box-sizing: border-box;
   z-index: 1;
@@ -401,7 +403,7 @@ form {
   background-color: rgba(255,185,66,0.8);
   width: 100%;
   max-width: 100%;
-  margin: 0 auto;
+  margin-bottom: 20px;
   padding-top: 15px;
   box-sizing: border-box;
   z-index: 1;
