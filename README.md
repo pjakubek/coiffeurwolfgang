@@ -8,11 +8,11 @@ Website Coiffeur Wolfgang
 - [x] Preise
 - [x] Impressum
 - [x] Kontakt (Formular, Google Maps)
-- [ ] Terminverwaltung
+- [x] Terminverwaltung
 - [ ] Deutsch/Englisch
-- [ ] Stylesheet ersetzen/ergänzen
+- [x] Stylesheet ersetzen/ergänzen
 - [x] Navbar/Footer ändern (Footer ganz unten? Kontakt/Impressum nicht sichtbar)
-- [ ] Email senden Kontaktformular
+- [x] Email senden Kontaktformular
 - [ ] Bewerbungsformular (Dateien hochladen)
 - [x] Home Seite Farbe navbar (eigene Navbar fuer Index)
 - [x] Oeffnungszeiten Tabelle schaut seltsam aus (Petrus fast-fix)
