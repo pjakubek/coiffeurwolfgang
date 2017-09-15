@@ -30,13 +30,21 @@
   }
 
 
-  if ($_POST['submit']) {
-        header('Location: contact.html');
-    mail ($to, $subject, $body, $from)
+  $checkVars = array($statusname, $statusmail, $statusmessage);
+  $var = 1;
 
+
+  if ($_POST['submit']) {
+    if(in_array($var, $checkVars)){
+
+
+    header('Location: contact.html');
+    mail ($to, $subject, $body, $from)
     } else {
     $echo = '<p>Ups, da ist wohl etwas schief gelaufen!</p>';
-    }
+  } else {
+    $echo = '<p>Ups, da ist wohl etwas schief gelaufen!</p>'
+  }
 
   }
  ?>
