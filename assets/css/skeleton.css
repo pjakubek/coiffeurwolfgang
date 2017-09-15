@@ -382,6 +382,7 @@ form {
   padding-bottom: 20px;
   /* must be same height as the footer */
 }
+.maincontent{
   margin-top: 20px;
 }
 
