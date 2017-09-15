@@ -10,22 +10,22 @@
   $body = "von: $name \n E-Mail: $mail \n Nachricht: $message";
 
   if ($name = '') {
-    $statusname = 0;
+    $statusname = false
   } else {
-    $statusname = 1;
+    $statusname = true
   }
 
   if($email = '' || preg_match("/([w-]+@[w-]+.[w-]+)/",$_POST['email']) {
-      $statusmail = 0;
-    }else{
-      $statusmail = 1;
+      $statusmail = false
+    } else {
+      $statusmail = true
     }
   }
 
   if($message = '') {
-    $statusmessage = 0;
-   }else{
-      $statusmessage = 1;
+    $statusmessage = true
+   } else {
+      $statusmessage = false
     }
   }
 
@@ -36,12 +36,10 @@
 
   if ($_POST['submit']) {
     if(in_array($var, $checkVars)){
-
-
-    header('Location: contact.html');
-    mail ($to, $subject, $body, $from)
+      header('Location: contact.html')
+      mail ($to, $subject, $body, $from)
     } else {
-    $echo = '<p>Ups, da ist wohl etwas schief gelaufen!</p>';
+    $echo = '<p>Ups, da ist wohl etwas schief gelaufen!</p>'
   } else {
     $echo = '<p>Ups, da ist wohl etwas schief gelaufen!</p>'
   }
