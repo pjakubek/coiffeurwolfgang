@@ -1,4 +1,5 @@
 <?php
+
 if(isset($_POST['submit'])) {
 
     // EDIT THE 2 LINES BELOW AS REQUIRED
@@ -24,10 +25,11 @@ if(isset($_POST['submit'])) {
 
 
 
+
     $email_from = $_POST['email']; // required
     $name = $_POST['name']; // required
     $message = $_POST['message']; // required
-
+    $file = $_POST['file'];
 
     $email_message = $name . " hat Ihnen folgende Nachricht gesendet: \n\n";
 
@@ -47,7 +49,7 @@ if(isset($_POST['submit'])) {
 $headers = 'From: '.$email_from."\r\n".
 'Reply-To: '.$email_from."\r\n" .
 'X-Mailer: PHP/' . phpversion();
-@mail($email_to, $email_subject, $email_message, $headers);
+@mail($email_to, $email_subject, $email_message, $file, $headers);
 
 header("Location: http://www.coiffeurwolfgang.com/development/de/index.html");
 exit();
