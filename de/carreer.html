@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
 
   <!-- Basic Page Needs
@@ -14,7 +14,7 @@
   <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="../assets/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../assets/font-awesome-4.7.0/css/font-awesome.min.css">
 
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -70,25 +70,67 @@
         <!-- BEGIN CONTACT FORM -->
 
         <div class="container">
-          <h4> Sende uns deine Bewerbungsunterlagen! </h4>
-            <form method="post" action="../assets/php/sendapplication.php">
+          <h4> Bewirb dich einfach! </h4>
+            <form enctype="multipart/form-data" method="post" action="../assets/php/sendapplication.php">
             <div class="row">
-              <div class="six columns">
-                <label for="exampleEmailInput">E-Mail Adresse</label>
-                <input class="u-full-width" name="email" type="email" placeholder="test@mailbox.com" id="exampleEmailInput">
-              </div>
+              <div class="three columns">
+                    <label for="genderInput"> Geschlecht</label>
+                      <input type="radio" name="gender" value="male" id="genderInput" > Male<br>
+                       <input type="radio" name="gender" value="female" id="genderInput"> Female<br>
+                        <input type="radio" name="gender" value="other" id="genderInput" checked> keine Angabe
+                    </div>
+                     <div class="three columns">
+                         <label for="ageInput"> Geburtsdatum</label>
+                         <input type="date" name="birthdate" id="ageInput">
+                    </div>
               <div class="six columns">
                 <label for="exampleNameInput">Name (Vor- und Nachname!)</label>
                 <input class="u-full-width" name="name" type="text" placeholder="test@mailbox.com" id="exampleEmailInput">
               </div>
             </div>
-            <label for="exampleMessage"> Deine Nachricht</label>
+                <div class="row">
+                      <div class="six columns">
+                <label for="exampleEmailInput">E-Mail Adresse</label>
+                <input class="u-full-width" name="email" type="email" placeholder="test@mailbox.com" id="exampleEmailInput">
+              </div>
+              
+                     <div class="six columns">
+                         <label for="addressInput"> Adresse</label>
+                         <input class="u-full-width" type="textfield" name="address" id="addressInput">
+                    </div>
+                   
+                </div>
+                <div class="row">
+                    <div class="six columns">
+                        <label for="schoolInput"> letzte Schule </label>
+                        <input class="u-full-width" type="text" id="schoolInput" name="school">
+                    </div>
+                    <div class="six columns">
+                        <label for="companyInput"> Lehrbetrieb (wenn nicht vorhanden einfach leer lassen!)</label>
+                        <input class="u-full-width" type="text" id="companyInput" name="company">
+                    </div>
+                </div>
+                
+                <div class="row">
+                <div class="six columns">
+                    <label for="awardInput"> Auszeichnungen (wenn nicht vorhanden einfach leer lassen!)</label>
+                    <input class="u-full-width" type="text" id="awardInput" name="award">
+                    </div>
+                <div class="six columns">
+                    <label for="otherInput"> Sonstige Kenntnisse</label>
+                    <input class="u-full-width" type="text" id="otherInput" name="other">
+                    </div>
+                </div>
+                
+                
+            <label for="exampleMessage">Motivationsschreiben</label>
             <textarea class="u-full-width" name="message" placeholder="Sehr geehrter Herr Schwenzner…" id="exampleMessage"></textarea>
-            <label>Dokumente anh&auml;ngen <br>
-              <input name="file" type="file" size="50" accept="text/*">
-            </label>
-            <input class="button-primary" type="submit" value="Senden">
-          </form>
+                Bitte alle Felder ausfüllen! <br>
+            <input class="button-primary" name="submit" type="submit" value="Senden">
+            </form>
+            
+            
+    
         </div>
       </div>
       <!-- END CONTACT FORM -->

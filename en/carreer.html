@@ -14,7 +14,7 @@
   <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="../assets/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../assets/font-awesome-4.7.0/css/font-awesome.min.css">
 
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -66,27 +66,68 @@
         <!-- END DESCRIPTION -->
 
         <!-- BEGIN CONTACT FORM -->
-
-        <div class="container">
-          <h4> Send us your application documents! </h4>
-            <form method="post" action="../assets/php/sendapplication.php">
+   <div class="container">
+          <h4> Just apply! </h4>
+            <form enctype="multipart/form-data" method="post" action="../assets/php/sendapplication.php">
             <div class="row">
-              <div class="six columns">
-                <label for="exampleEmailInput">Your email-address</label>
-                <input class="u-full-width" name="email" type="email" placeholder="test@mailbox.com" id="exampleEmailInput">
-              </div>
+              <div class="three columns">
+                    <label for="genderInput"> Gender</label>
+                      <input type="radio" name="gender" value="male" id="genderInput" > Male<br>
+                       <input type="radio" name="gender" value="female" id="genderInput"> Female<br>
+                        <input type="radio" name="gender" value="other" id="genderInput" checked> keine Angabe
+                    </div>
+                     <div class="three columns">
+                         <label for="ageInput"> Birth date</label>
+                         <input type="date" name="birthdate" id="ageInput">
+                    </div>
               <div class="six columns">
                 <label for="exampleNameInput">Name (First- and Lastname!)</label>
                 <input class="u-full-width" name="name" type="text" placeholder="test@mailbox.com" id="exampleEmailInput">
               </div>
             </div>
-            <label for="exampleMessage">Message</label>
-            <textarea class="u-full-width" name="message" placeholder="Sehr geehrter Herr Schwenzner…" id="exampleMessage"></textarea>
-            <label>Attach documents <br>
-              <input name="file" type="file" size="50" accept="text/*">
-            </label>
-            <input class="button-primary" type="submit" value="Senden">
-          </form>
+                <div class="row">
+                      <div class="six columns">
+                <label for="exampleEmailInput">Email address</label>
+                <input class="u-full-width" name="email" type="email" placeholder="test@mailbox.com" id="exampleEmailInput">
+              </div>
+              
+                     <div class="six columns">
+                         <label for="addressInput">Address</label>
+                         <input class="u-full-width" type="textfield" name="address" id="addressInput">
+                    </div>
+                   
+                </div>
+                <div class="row">
+                    <div class="six columns">
+                        <label for="schoolInput">last school</label>
+                        <input class="u-full-width" type="text" id="schoolInput" name="school">
+                    </div>
+                    <div class="six columns">
+                        <label for="companyInput"> instructive operation (if not existing simply leave blank!)</label>
+                        <input class="u-full-width" type="text" id="companyInput" name="company">
+                    </div>
+                </div>
+                
+                <div class="row">
+                <div class="six columns">
+                    <label for="awardInput"> Awards (if not existing simply leave blank!)</label>
+                    <input class="u-full-width" type="text" id="awardInput" name="award">
+                    </div>
+                <div class="six columns">
+                    <label for="otherInput"> Other skills</label>
+                    <input class="u-full-width" type="text" id="otherInput" name="other">
+                    </div>
+                </div>
+                
+                
+            <label for="exampleMessage">Motivation letter</label>
+            <textarea class="u-full-width" name="message" placeholder="Dear Mr. Schwenzner…" id="exampleMessage"></textarea>
+                Please complete all fields! <br>
+            <input class="button-primary" name="submit" type="submit" value="Senden">
+            </form>
+            
+            
+    
         </div>
       </div>
       <!-- END CONTACT FORM -->
