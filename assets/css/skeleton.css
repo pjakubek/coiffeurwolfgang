@@ -398,6 +398,9 @@ form {
 .maincontent{
   margin-top: 6rem;
 }
+.social-media{
+  padding-bottom: 3rem;
+}
 
 .navbar-home {
   position: fixed;
