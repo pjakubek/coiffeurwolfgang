@@ -52,6 +52,22 @@ $headers = 'From: '.$email_from."\r\n".
 header("Location: http://www.coiffeurwolfgang.com/development/de/index.html");
 exit();
 
+    if($mailSent) {
+    echo '<script language="javascript">';
+    echo 'alert("Ihre Nachricht wurde gesendet!");';
+    echo 'window.location = "../../de/index.html";';
+    echo '</script>';
+
+    
+    exit(); 
+} else {
+   
+    echo '<script language="javascript">';
+    echo 'alert("Tut uns leid, da ist wohl etwas schief gelaufen! Bitte kontrollieren Sie Ihre Eingaben!")';
+    echo '</script>';
+    header("Location: http://www.coiffeurwolfgang.com/development/de/contact.html");
+}
+
 
 }
 ?>

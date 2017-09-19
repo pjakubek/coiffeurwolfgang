@@ -1,85 +1,93 @@
 <?php
 if(isset($_POST['submit'])) {
-    error_reporting(E_NOTICE | E_ERROR);
+
     // EDIT THE 2 LINES BELOW AS REQUIRED
     $email_to = "pjakubek11@gmail.com";
-    $email_subject = "Neue Nachricht von " . $_POST['name'];
+    $email_subject = "Neue Bewerbung von " . $_POST['name'];
+
+    function died($error) {
+        // your error code can go here
+        echo "We are very sorry, but there were error(s) found with the form you submitted. ";
+        echo "These errors appear below.<br /><br />";
+        echo $error."<br /><br />";
+        echo "Please go back and fix these errors.<br /><br />";
+        die();
+    }
+
+
+    // validation expected data exists
+    if(!isset($_POST['email']) ||
+        !isset($_POST['name']) ||
+        !isset($_POST['address']) ||
+        !isset($_POST['school']) ||
+        !isset($_POST['birthdate']) ||
+        !isset($_POST['message'])) {
+        died('We are sorry, but there appears to be a problem with the form you submitted.');
+    }
+
+
+
     $email_from = $_POST['email']; // required
     $name = $_POST['name']; // required
+    $gender = $_POST['gender'];
+    $address = $_POST['address'];
+    $school = $_POST['school'];
+    $company = $_POST['company'];
+    $awards = $_POST['awards'];
+    $other = $_POST['other'];
+    $birthdate = $_POST['birthdate'];
     $message = $_POST['message']; // required
     
-    $target_dir = "/home/.sites/17/site7248945/tmp";
 
 
-    
+    $email_message = $name . " hat sich bei Ihnen beworben: \n\n";
 
-    // your form-handling code
-    $file_name = $_FILES['file_upload']['name'];
-    
-    echo "<PRE>" . print_r ($_FILES, true) . "</PRE>";
-    
-    $file_tmp_name = $_FILES['file_upload']['tmp_name'];
-    $file_size = $_FILES['file_upload']['size'];
-    $file_type = $_FILES['file_upload']['type'];
-    $file_error = $_FILES['file_upload']['error'];
-    
-    if($file_error > 0)
-    {
-        die('Upload error or No files uploaded');
+
+    function clean_string($string) {
+      $bad = array("content-type","bcc:","to:","cc:","href");
+      return str_replace($bad,"",$string);
     }
 
-    //read from the uploaded file & base64_encode content for the mail
 
-    $handle = fopen($file_tmp_name, "r");
-    $content = fread($handle, $file_size);
-    fclose($handle);
-    $encoded_content = chunk_split(base64_encode($content));
+
+    $email_message .= "Name: ".clean_string($name)."\n";
+    $email_message .= "Email: ".clean_string($email_from)."\n"."\n";
+    $email_message .= "Geburtsdatum: ".clean_string($birthdate)."\n";
+    $email_message .= "Geschlecht: ".clean_string($gender)."\n";
+    $email_message .= "Adresse: ".clean_string($address)."\n"."\n";
+    $email_message .= "Zuletzt besuchte Schule: ".clean_string($school)."\n";
+    if($_POST['company'] != null) {
+        $email_message .= "Lehrbetrieb: ".clean_string($company)."\n";
+    } else {
+        $email_message .= "BewerberIn möchte eine Lehre machen!" ."\n";
+    }
+    $email_message .= "Auszeichnungen: " .clean_string($awards) ."\n";
+    $email_message .= "Sonstige Kenntnisse: " .clean_string($other) ."\n"."\n"."\n";
+    $email_message .= "Motivationsschreiben: " .clean_string($message) ."\n";
   
-     $boundary = md5("aide");
-        //header
-        $headers = "MIME-Version: 1.0\r\n"; 
-        $headers .= "From:".$email_from."\r\n"; 
-        $headers .= "Reply-To: ".$email_from."" . "\r\n";
-        $headers .= "Content-Type: multipart/mixed; boundary = $boundary\r\n\r\n"; 
-        
-        //plain text 
-        $body = "--$boundary\r\n";
-        $body .= "Content-Type: text/plain; charset=ISO-8859-1\r\n";
-        $body .= "Content-Transfer-Encoding: base64\r\n\r\n"; 
-        $body .= chunk_split(base64_encode($message)); 
-        
-        //attachment
-        $body .= "--$boundary\r\n";
-        $body .="Content-Type: $file_type; name=".$file_name."\r\n";
-        $body .="Content-Disposition: attachment; filename=".$file_name."\r\n";
-        $body .="Content-Transfer-Encoding: base64\r\n";
-        $body .="X-Attachment-Id: ".rand(1000,99999)."\r\n\r\n"; 
-        $body .= $encoded_content; 
 
+// create email headers
+$headers = 'From: '.$email_from."\r\n".
+'Reply-To: '.$email_from."\r\n" .
+'X-Mailer: PHP/' . phpversion();
+$mailSent = @mail($email_to, $email_subject, $email_message, $headers);
 
+if($mailSent) {
+    echo '<script language="javascript">';
+    echo 'alert("Ihre Bewerbung wurde gesendet!");';
+    echo 'window.location = "../../de/index.html";';
+    echo '</script>';
 
-
-$sentMail = mail($email_to, $email_subject, $body, $headers);
-
-    if($sentMail) //output success or failure messages
-    {       
-        die('Thank you for your email');
-    }else{
-        echo $email_to;
-        echo $email_subject;
-        echo $email_from;
-        echo $name;
-        echo $message;
-        echo $file_tmp_name;
-        echo $file_name;
-        echo $file_error;
-
-        die('Could not send mail! Please check your PHP mail configuration.'); 
+    
+    exit(); 
+} else {
    
-    }
+    echo '<script language="javascript">';
+    echo 'alert("Tut uns leid, da ist wohl etwas schief gelaufen! Bitte kontrollieren Sie Ihre Eingaben!")';
+    echo '</script>';
+    header("Location: http://www.coiffeurwolfgang.com/development/de/carreer.html");
+}
 
-header("Location: http://www.coiffeurwolfgang.com/development/de/index.html");
-exit();
 
 
 }
