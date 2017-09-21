@@ -37,7 +37,7 @@ if(isset($_POST['submit'])) {
     $other = $_POST['other'];
     $birthdate = $_POST['birthdate'];
     $message = $_POST['message']; // required
-    
+
 
 
     $email_message = $name . " hat sich bei Ihnen beworben: \n\n";
@@ -64,7 +64,7 @@ if(isset($_POST['submit'])) {
     $email_message .= "Auszeichnungen: " .clean_string($awards) ."\n";
     $email_message .= "Sonstige Kenntnisse: " .clean_string($other) ."\n"."\n"."\n";
     $email_message .= "Motivationsschreiben: " .clean_string($message) ."\n";
-  
+
 
 // create email headers
 $headers = 'From: '.$email_from."\r\n".
@@ -78,10 +78,10 @@ if($mailSent) {
     echo 'window.location = "../../de/index.html";';
     echo '</script>';
 
-    
-    exit(); 
+
+    exit();
 } else {
-   
+
     echo '<script language="javascript">';
     echo 'alert("Tut uns leid, da ist wohl etwas schief gelaufen! Bitte kontrollieren Sie Ihre Eingaben!")';
     echo '</script>';
