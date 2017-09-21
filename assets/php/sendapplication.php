@@ -85,7 +85,7 @@ if($mailSent) {
     echo '<script language="javascript">';
     echo 'alert("Tut uns leid, da ist wohl etwas schief gelaufen! Bitte kontrollieren Sie Ihre Eingaben!")';
     echo '</script>';
-    header("Location: http://www.coiffeurwolfgang.com/development/de/carreer.html");
+    header("Location: http://www.coiffeurwolfgang.com/development/de/career.html");
 }
 
 
